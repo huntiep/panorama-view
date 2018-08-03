@@ -89,7 +89,7 @@ async function initView() {
 
 	resizeGroups();
 
-	captureThumbnails();
+	//captureThumbnails();
 	//view.intervalId = setInterval(captureThumbnails, 2000);
 
 	// set all listeners
@@ -115,12 +115,12 @@ async function initView() {
 
 	document.addEventListener('visibilitychange', function() {
 		if(document.hidden) {
-			browser.tabs.onUpdated.removeListener(captureThumbnail);
+			//browser.tabs.onUpdated.removeListener(captureThumbnail);
 			//clearInterval(view.intervalId);
 		}else{
-			browser.tabs.onUpdated.addListener(captureThumbnail);
+			//browser.tabs.onUpdated.addListener(captureThumbnail);
 			//view.intervalId = setInterval(captureThumbnails, 2000);
-			captureThumbnails();
+			//captureThumbnails();
 		}
 	}, false);
 

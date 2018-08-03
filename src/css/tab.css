@@ -72,12 +72,9 @@
 }
 
 .tab .favicon {
-	width: 16px;
-	height: 16px;
-
-	position: absolute;
-	left: 0;
-	top: 0;
+	width: 75%;
+	height: 75%;
+    margin-left: 12.5%;
 
 	border-right: #ffffff 3px solid;
 	border-bottom: #ffffff 3px solid;
@@ -94,8 +91,8 @@
 }
 
 .tab .close {
-	width: 16px;
-	height: 16px;
+	width: 24px;
+	height: 24px;
 
 	position: absolute;
 	right: 0;
@@ -103,12 +100,12 @@
 
 	background-image: url(/icons/tab_close.svg);
 	background-repeat: no-repeat;
-	background-size: 10px;
+	background-size: 15px;
 	background-position: center;
 }
 
 .tab .name {
-	height: 20px;
+	height: 30px;
 
 	position: absolute;
 	bottom: 0;
@@ -117,9 +114,8 @@
 
 	font-size: 12px;
 	text-align: center;
-	line-height: 22px;
+	line-height: 16px;
 	overflow: hidden;
-	white-space: nowrap;
 }
 
 

@@ -525,8 +525,12 @@ function updateGroupFit(group) {
 
 	var index = 0;
 
-	var w = fit.width;
-	var h = w * fit.ratio;
+	//var w = fit.width == 0 ? 90 : fit.width;
+	//var h = w * fit.ratio;
+    var w = 150;
+    var h = 150;
+    //var pitch = 10;
+    var pitch = rect.width / w;
 
 	if(w < 55) {
 		small = true;
@@ -547,15 +551,17 @@ function updateGroupFit(group) {
 
 		childNodes[i].style.width = w + 'px';
 		childNodes[i].style.height = h + 'px';
-		childNodes[i].style.left = (w * (index % Math.floor(fit.pitch))) + 'px';
-		childNodes[i].style.top = (h * Math.floor(index / Math.floor(fit.pitch))) + 'px';
+		childNodes[i].style.left = (w * (index % Math.floor(pitch))) + 'px';
+		childNodes[i].style.top = (h * Math.floor(index / Math.floor(pitch))) + 'px';
 
+        /*
 		if(deck){
 			childNodes[i].style.left = 0 + 'px';
 			childNodes[i].style.top = 0 + 'px';
 		}
+        */
 
-		childNodes[i].style.zIndex = index;
+		//childNodes[i].style.zIndex = index;
 
 		index++;
 	}
